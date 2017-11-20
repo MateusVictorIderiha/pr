@@ -36,9 +36,8 @@ body.home > section:nth-child(2n) {
 }
 
 .topo {
-    height: 181px;
+    height: 213px;
     background: url(../images/topo.jpg) no-repeat center;
-    margin-bottom: 30px;
 }
 
 .topo .menu {
@@ -66,7 +65,7 @@ body.home > section:nth-child(2n) {
     color: hsl(0, 8%, 89%);
     font-weight: 500;
     font-size: 1.2em;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 1px 1px 0px hsl(0, 0%, 0%);
 }
 
 .topo > .menu > ul > li > a {
@@ -122,7 +121,7 @@ body.home > section:nth-child(2n) {
     top: 30px;
     border-width: 0 1px 1px 1px;
     width: 150px;
-    box-shadow: 1px 1px 1px #000;
+    box-shadow: 1px 1px 1px hsl(0, 0%, 0%);
 }
 
 .drop:hover > .menuDrop > li {
@@ -167,11 +166,11 @@ p {
 }
 .titulo {
     color: #B5001D;
-    text-shadow: 0.5px 0.5px 0 #000;
+    text-shadow: 0.5px 0.5px 0 hsl(0, 0%, 0%);
     font-size: 1.5em;
 }
 .subtitulo {
-    color: #000;
+    color: hsl(0, 0%, 0%);
     font-size: 1.2em;
 }
 
@@ -198,14 +197,19 @@ a:hover {
     float: left;
 }
 
-.objetivosPag figcaption {
+.objetivosPag {
+    display: flex;
+    align-items: center;
+}
+
+.objetivosPag .texto-pag {
     float: right;    
     max-width: 33%;
     text-align: center;
-    padding: 30px 2% 0 2%;
+    padding: 0 2%;
 }
 
-.objetivosPag img {
+.objetivosPag .img-pag {
     max-height: 293px;
     width: 63%;
     opacity: 0.5;
@@ -218,12 +222,13 @@ a:hover {
     transform: translateY(50%); 
 }
 
-.chamada div, .chamada img {
+.chamada .texto-chamada, .chamada .img-lateral {
     float: left;
 }
-.chamada div {
+.chamada .texto-chamada {
     max-width: calc(100% - 150px);
     padding-top: 20px;
+    text-align: justify;
 }
 .chamada {
     min-height: 200px;
@@ -259,22 +264,32 @@ a:hover {
 }
 .novidadeRecent .descricaoNovidade {
     float: left;
-    width: calc(100% - 219px);
+    width: calc(100% - 199px - 20px);
     padding: 10px;
 }
+.novidadeRecent .descricaoNovidade p {
+    text-overflow: ellipsis; 
+    height: calc(199px - 1em - 1.2em - 40px - 4px);
+    overflow: hidden;
+} 
+
 .novidadeRecent .btnLeia {
-    color: #FFD300;
-    text-shadow: 0.5px 0.5px 0px #635302;
-    transition: color 0.6s, text-shadow 0.6s;
+    color: hsl(0, 0%, 0%);
+    transition: color 0.6s, baground-color 0.6s;
     font-weight: 600;
     float: right;
+    background-color: #FFD300;
+    padding: 2px 15px;
+    border-radius: 3px;
+    border: 1px outset #ffd400;
 }
 .novidadeRecent .btnLeia:hover {
-    color: hsl(0, 0%, 0%);
-    text-shadow: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(50, 100%, 37%);
+    border: 1px inset hsl(50, 100%, 37%);
 }
 
-.novidades .novidadesRecentes {
+.novidades .novidadesRecentes, .novidade {
     width: 80%;
     margin: 0 1% 0 2.5%;
     float: left;
@@ -300,14 +315,19 @@ a:hover {
     text-align: center;
 }
 
-.novidadesLista {
-    width: 14%;
+.sidebar {
     margin-right: 2.5%;
+    margin-bottom: 2.5%;
     float: left;
 }
 
+.lista {
+    width: 14%;
+    text-align: center;
+}
+
 .tabela {
-    border: 1px solid #000;
+    border: 1px solid hsl(0, 0%, 0%);
     border-spacing: 0;
 }
 #tabela-grupo-pers {
@@ -363,33 +383,58 @@ a:hover {
     font: 0.1em;
 }
 
-.margin30 {
-    margin-top: 30px;
+.padding30 {
+    padding-top: 30px;
 }
 
 .text-center {
     text-align: center;
+    display: block;
+}
+
+.novidade .artigo, .novidade #formNovidade {
+    padding: 0 10%;
+}
+
+.novidade #formNovidade .group-form {
+    float: left;
+    width: 50%;
+    border: none;
+}
+
+.group-form .form-control {
+    padding: 5px;
+    margin-bottom: 7px;
+}
+.group-form input.form-control {
+    width: calc(100% - 10px - 4px);
+}
+.group-form select.form-control, .group-form textarea.form-control {
+    width: 100%;    
 }
 
 @media screen and (max-width: 1280px) {
     body {
         font-size: 0.9em;
     }
-    .novidadesRecentes {
+    .home .novidadesRecentes {
         padding: 20px 5%;
     }
     .novidadeRecent {
         min-height: 150px;
         height: 150px;
     }
-    .novidadeRecent .descricaoNovidade {
+    .novidadeRecent img {
         max-height: 150px;
+    }
+    .novidadeRecent .descricaoNovidade {
+        width: calc(100% - 150px - 20px);        
     }
     .novidadeRecent .descricaoNovidade p {
         text-overflow: ellipsis; 
-        height: calc(150px - 0.9em - 1.2em - 40px);
+        height: calc(150px - 0.9em - 1.2em - 40px - 4px);
         overflow: hidden;
-    }
+    } 
     
     .tabela#tabela-grupo-pers {
         width: 900px;
