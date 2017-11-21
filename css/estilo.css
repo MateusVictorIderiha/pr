@@ -134,15 +134,6 @@ ul li {
     list-style-type: none;
 }
 
-.sumario {
-    width: 224px;
-    float: left;
-    position: fixed;
-}
-.sumario h2 {
-    margin-bottom: 10px;
-}
-
 h1, h2, h3 {
     font-family: arial, verdana, sans-serif ;
 }
@@ -295,6 +286,12 @@ a:hover {
     float: left;
 }
 
+.resenhas {
+    width: 80%;
+    margin: 0 2.5% 0 17.5%;
+    float: left;
+}
+
 .personagensBando {
     margin: 0 auto;
     text-align: center;
@@ -365,7 +362,6 @@ a:hover {
     float: left;
 }
 
-
 .rodape {
     text-align: center;
     color: hsl(0, 0%, 100%);
@@ -396,12 +392,18 @@ a:hover {
     padding: 0 10%;
 }
 
-.novidade #formNovidade .group-form {
+.group-form {
+    border: none;    
     float: left;
-    width: 50%;
-    border: none;
 }
 
+.novidade #formNovidade .group-form {
+    width: calc(50% - 3.5px);
+}
+
+#formNovidade .group-form:first-of-type {
+    margin-right: 7px;
+}
 .group-form .form-control {
     padding: 5px;
     margin-bottom: 7px;
@@ -411,6 +413,44 @@ a:hover {
 }
 .group-form select.form-control, .group-form textarea.form-control {
     width: 100%;    
+}
+.group-form textarea.form-control {
+    padding-left: 5px;
+    min-height: 89px;
+}
+
+.sumario {
+    height: 100%;
+    float: left;
+    margin-left: 2.5%;
+    position: fixed;
+}
+
+.resenhas .resenha .form {
+    text-align: center;
+}
+.resenhas .resenha .form .group-form {
+    width: calc(100% / 3 - 2px);
+    text-align: center;
+    border-left: 1px solid #000;
+    height: 61px;
+}
+.resenhas .resenha .form .group-form:first-child {
+    border-left: none;    
+}
+.resenhas .resenha .form .group-form .form-range {
+    display: block;
+    margin: 0 auto;
+}
+.resenhas .resenha .form .group-form select {    
+    height: 61px;
+    width: 80%
+}
+.resenhas .resenha .btn_enviar {
+    margin: 0 auto;
+}
+.resenha {
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1280px) {
