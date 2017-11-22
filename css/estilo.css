@@ -43,6 +43,8 @@ body.home > section:nth-child(2n) {
 .topo .menu {
     background-image: linear-gradient(hsl(202, 100%, 40%),hsl(202, 100%, 24%));
     z-index: 99;
+    float: left;
+    width: 100%;
 }
 .topo .menu {
     border: 1px solid hsl(0, 0%, 0%);
@@ -163,6 +165,7 @@ p {
 .subtitulo {
     color: hsl(0, 0%, 0%);
     font-size: 1.2em;
+    margin: 0;
 }
 
 a {
@@ -258,7 +261,7 @@ a:hover {
     width: calc(100% - 199px - 20px);
     padding: 10px;
 }
-.novidadeRecent .descricaoNovidade p {
+.novidadeRecent .descricaoNovidade .descricao {
     text-overflow: ellipsis; 
     height: calc(199px - 1em - 1.2em - 40px - 4px);
     overflow: hidden;
@@ -269,7 +272,7 @@ a:hover {
     transition: color 0.6s, baground-color 0.6s;
     font-weight: 600;
     float: right;
-    background-color: #FFD300;
+    background-color: hsla(50, 100%, 50%, 0.75);
     padding: 2px 15px;
     border-radius: 3px;
     border: 1px outset #ffd400;
@@ -287,26 +290,29 @@ a:hover {
 }
 
 .resenhas {
-    width: 80%;
+    width: calc(80% - 4%);
     margin: 0 2.5% 0 17.5%;
     float: left;
+    padding: 0 2%;
 }
 
 .personagensBando {
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
+    float: left;
+    width: 100%;
 }
 .personagensBando .group-imagens {
     margin: 0 auto;
     width: 1280px;
 }
-.personagensBando figure {
-    float: left;
+.personagensBando .personagens-mug {
     padding: 20px 5px 0 0;
+    display: inline-block;
 }
 
-.personagensBando figure, .personagensBando figure img {
+.personagensBando .personagens-mug, .personagensBando .personagens-mug img {
     max-width: 115px;
     height: 181px;
     text-align: center;
@@ -319,8 +325,10 @@ a:hover {
 }
 
 .lista {
-    width: 14%;
+    width: 12%;
     text-align: center;
+    padding: 1%;
+    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.25);
 }
 
 .tabela {
@@ -336,14 +344,12 @@ a:hover {
     padding: 5px 10px;
 }
 .tabela thead tr, .tabela tfoot tr {
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsla(50, 100%, 50%, 0.75);
     color: hsl(100, 100%, 100%);
     font-size: 1.1em;
 }
 .tabela thead tr th, .tabela tfoot tr th {
-    background: -webkit-linear-gradient(#BF9F00, #615000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 3px #000;
 }
 .tabela tbody tr:nth-of-type(2n) {
     background-color: hsla(202, 100%, 40%, 0.1);
@@ -381,6 +387,10 @@ a:hover {
 
 .padding30 {
     padding-top: 30px;
+}
+
+.margin30 {
+    margin-top: 30px;
 }
 
 .text-center {
@@ -485,7 +495,7 @@ a:hover {
     .novidadeRecent .descricaoNovidade {
         width: calc(100% - 150px - 20px);        
     }
-    .novidadeRecent .descricaoNovidade p {
+    .novidadeRecent .descricaoNovidade .descricao {
         text-overflow: ellipsis; 
         height: calc(150px - 0.9em - 1.2em - 40px - 4px);
         overflow: hidden;
