@@ -36,8 +36,8 @@ body.home > section:nth-child(2n) {
 }
 
 .topo {
-    height: 213px;
-    background: url(../images/topo.jpg) no-repeat center;
+    height: 181px;
+    background: url(../imagens/topo.jpg) no-repeat center;
 }
 
 .topo .menu {
@@ -51,7 +51,7 @@ body.home > section:nth-child(2n) {
     border-width: 1px 0;
     padding: 0;
     position: relative;
-    top: 181px;
+    /*top: 81px;*/
     float: left;
     width: 100%;
 }
@@ -189,6 +189,9 @@ a:hover {
     font: bold 'times new roman' 'serif';
     text-align: center;
     float: left;
+    position: relative;
+    top: -7px;
+    left: 20px;
 }
 
 .objetivosPag {
@@ -332,7 +335,7 @@ a:hover {
 }
 
 .tabela {
-    border: 1px solid hsl(0, 0%, 0%);
+    border: 1px solid hsla(0, 0%, 0%, 0.5);
     border-spacing: 0;
 }
 #tabela-grupo-pers {
@@ -352,11 +355,11 @@ a:hover {
     text-shadow: 0px 0px 3px #000;
 }
 .tabela tbody tr:nth-of-type(2n) {
-    background-color: hsla(202, 100%, 40%, 0.1);
+    background-color: hsla(0, 0%, 80%, 0.5);
     text-shadow: 0 0 8px #fff;
 }
 .tabela tbody tr:hover {
-    background-color: hsla(50, 100%, 50%, 0.24);
+    background-color: hsla(202, 100%, 40%, 0.1);
 }
 
 .tabela#tabela-personagem {
@@ -364,8 +367,14 @@ a:hover {
     float: left;
 }
 .historia-pers {
-    width: calc(100% - 522px - 10%);
+    width: calc(100% - 522px - 20px);
     float: left;
+    padding-left: 20px;
+}
+
+.personagem {
+    width: 1299px;
+    margin: 0 auto; 
 }
 
 .rodape {
@@ -467,6 +476,11 @@ a:hover {
     margin-top: 20px;
     padding: 20px 10px;
     background-color: hsla(202, 100%, 40%, 0.1);
+}
+
+.img-curiosidade {
+    float: left;
+    margin: 0 20px 20px 0;
 }
 
 .grupo-personagem {
