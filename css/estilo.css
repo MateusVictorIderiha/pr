@@ -140,11 +140,6 @@ h1, h2, h3 {
     font-family: arial, verdana, sans-serif ;
 }
 
-.lendario {
-    float: left;
-    clear: left;
-}
-
 h1 {
     font-size: 2em;
 }
@@ -191,7 +186,7 @@ a:hover {
     float: left;
     position: relative;
     top: -7px;
-    left: 20px;
+    left: calc((100% - 1366px) / 2 + 20px);
 }
 
 .objetivosPag {
@@ -209,7 +204,7 @@ a:hover {
 .objetivosPag .img-pag {
     max-height: 293px;
     width: 63%;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     clear: both;
 }
 
@@ -251,6 +246,12 @@ a:hover {
 }
 .novidadesRecentes figure.novidadeRecent:nth-of-type(2n) {
     margin-right: 0;
+}
+
+.novidades {
+    width: calc(100% - 19.5%);
+    float: left;
+    margin-left: 2.5%;
 }
 
 .novidadeRecent img {
@@ -348,15 +349,11 @@ a:hover {
 }
 .tabela thead tr, .tabela tfoot tr {
     background-color: hsla(50, 100%, 50%, 0.75);
-    color: hsl(100, 100%, 100%);
+    color: hsl(0, 0%, 0%);
     font-size: 1.1em;
-}
-.tabela thead tr th, .tabela tfoot tr th {
-    text-shadow: 0px 0px 3px #000;
 }
 .tabela tbody tr:nth-of-type(2n) {
     background-color: hsla(0, 0%, 80%, 0.5);
-    text-shadow: 0 0 8px #fff;
 }
 .tabela tbody tr:hover {
     background-color: hsla(202, 100%, 40%, 0.1);
@@ -375,6 +372,7 @@ a:hover {
 .personagem {
     width: 1299px;
     margin: 0 auto; 
+    padding: 20px 0;
 }
 
 .rodape {
@@ -475,7 +473,19 @@ a:hover {
 .curiosidade, .grupo-personagem {
     margin-top: 20px;
     padding: 20px 10px;
-    background-color: hsla(202, 100%, 40%, 0.1);
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.curiosidadeArtig {
+    clear: both;
+}
+
+.curiosidadeArtig .imgCuriosidade, .curiosidadeArtig .descricaoCuriosidade {
+    width: calc(50% - 20px);
+    float: left;
+    padding: 20px 10px;
+    max-height: 199px;
 }
 
 .img-curiosidade {
