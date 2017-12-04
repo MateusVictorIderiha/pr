@@ -43,6 +43,7 @@ body.home > section:nth-child(2n) {
 }
 
 .topo .menu {
+    font-family: 'Open Sans', arial, verdana, sans-serif;
     background-image: linear-gradient(hsl(202, 100%, 40%),hsl(202, 100%, 24%));
     z-index: 99;
     float: left;
@@ -138,14 +139,6 @@ ul li {
     list-style-type: none;
 }
 
-h1, h2, h3 {
-    font-family: arial, verdana, sans-serif ;
-}
-
-h1 {
-    font-size: 2em;
-}
-
 p {
     margin-bottom: 10px;
 }
@@ -207,7 +200,7 @@ a:hover {
 .objetivosPag .img-pag {
     max-height: 293px;
     width: 63%;
-    /*opacity: 0.5;*/
+    opacity: 0.75;
     clear: both;
 }
 
