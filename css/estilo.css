@@ -186,7 +186,7 @@ a:hover {
     float: left;
     position: relative;
     top: -7px;
-    left: calc((100% - 1366px) / 2 + 20px);
+    left: calc((100% - 1366px) / 2 + 17px);
 }
 
 .objetivosPag {
