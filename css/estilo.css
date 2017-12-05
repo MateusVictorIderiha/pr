@@ -37,6 +37,10 @@ body.home > section:nth-child(2n) {
     background-color: hsla(202, 100%, 40%, 0.1);
 }
 
+.divisao {
+    border: 0.5px solid hsl(202, 100%, 24%);
+}
+
 .topo {
     height: 181px;
     background: url(../imagens/topo.jpg) no-repeat center;
@@ -267,20 +271,22 @@ a:hover {
     overflow: hidden;
 } 
 
-.novidadeRecent .btnLeia {
+.btnLeia {
     color: #004d7a;
     transition: color 0.6s, baground-color 0.6s;
     font-weight: 600;
-    float: right;
     background-color: hsl(0, 0%, 100%);
     padding: 2px 15px;
     border-radius: 2px;
     border: 2px outset hsl(202, 100%, 40%);
 }
-.novidadeRecent .btnLeia:hover {
+.btnLeia:hover {
     color: hsl(0, 0%, 100%);
     background-color: #007dc6;
     border: 2px solid #007dc6;
+}
+.novidadesRecentes .btnLeia {
+    float: right;
 }
 
 .novidades .novidadesRecentes, .novidade {
@@ -291,7 +297,7 @@ a:hover {
 
 .resenhas {
     width: calc(80% - 4%);
-    margin: 0 2.5% 0 17.5%;
+    margin: -31px 2.5% 0 17.5%;
     float: left;
     padding: 0 2%;
 }
@@ -308,7 +314,7 @@ a:hover {
     width: 1280px;
 }
 .personagensBando .personagens-mug {
-    padding: 20px 5px 0 0;
+    padding: 5px 5px 0 0;
     display: inline-block;
 }
 
@@ -317,6 +323,48 @@ a:hover {
     height: 181px;
     text-align: center;
 }
+
+.personagensBando .personagens-mug img {
+    -webkit-filter: grayscale(1);
+    transition: all .5s;
+    z-index: 96;
+    position: relative;
+    top: -21px;
+}
+
+.personagensBando .personagens-mug .perso-caption {
+    font: 600 0.8em 'times new roman';
+}
+
+.personagensBando .personagens-mug .perso-caption {
+    z-index: 97;
+    position: relative;
+    top: 133px;
+    color: #797979;
+    text-transform: uppercase;
+}
+
+.personagensBando .link-perso {
+    z-index: 96;
+}
+.personagensBando .link-perso:hover * {
+    color: #B5001D;
+    text-shadow: 0.5px 0.5px 0 hsl(0, 0%, 0%);
+    transform: scale(1.1);
+    -webkit-filter: grayscale(0);
+}
+.personagensBando .link-perso:hover {
+    z-index: 999;
+}
+.personagensBando .link-perso:hover .perso-caption {
+    position: relative;
+    top: 136px;
+    z-index: 99;
+}
+
+/*#personagen-mugiwara {
+    background-image: url("../imagens/mugiwara.jpg");
+}*/
 
 .sidebar {
     margin-right: 2.5%;
@@ -332,6 +380,7 @@ a:hover {
 }
 
 .tabela {
+    font-family: 'Open Sans', arial, verdana, sans-serif;
     border: 1px solid hsla(0, 0%, 0%, 0.5);
     border-spacing: 0;
 }
@@ -339,6 +388,7 @@ a:hover {
     width: 1299px;
     margin: 0 auto;
 }
+
 .tabela tr th, .tabela tr td {
     border: 1px solid #c3c3c3;
     padding: 5px 10px;
@@ -360,6 +410,12 @@ a:hover {
     width: 522px;
     float: left;
 }
+#tabela-personagem tbody td:first-child {
+    text-align: center;
+}
+#tabela-personagem tbody td:first-child:hover {
+    background-color: #FFF;
+}   
 .historia-pers {
     width: calc(100% - 522px - 20px);
     float: left;
@@ -367,9 +423,8 @@ a:hover {
 }
 
 .personagem {
-    width: 1299px;
-    margin: 0 auto; 
-    padding: 20px 0;
+    padding: 0px 2.5%;
+    margin-top: 20px;
 }
 
 .rodape {
@@ -383,6 +438,7 @@ a:hover {
     position: relative;
     bottom: 0;
     width: 100%;
+    float: left;
 }
 
 .rodape small {
@@ -394,7 +450,11 @@ a:hover {
 }
 
 .margin30 {
-    margin-top: 30px;
+    margin-top: 41px;
+}
+
+main .margin30 {
+    margin-top: 31px;
 }
 
 .text-center {
@@ -411,6 +471,21 @@ a:hover {
     float: left;
 }
 
+.curiosidade-sbs {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+}
+.curiosidade-sbs p.perguntaSBS {
+    width: 50%;
+    float: left;
+    clear: both
+}
+.curiosidade-sbs p.perguntaSBS:nth-of-type(2n) {
+    text-align: right;
+    float: right;
+    margin-bottom: 20px;
+}
+
 .novidade #formNovidade .group-form {
     width: calc(50% - 3.5px);
 }
@@ -418,6 +493,15 @@ a:hover {
 #formNovidade .group-form:first-of-type {
     margin-right: 7px;
 }
+
+.novidadeRecent picture {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .group-form .form-control {
     padding: 5px;
     margin-bottom: 7px;
@@ -434,10 +518,10 @@ a:hover {
 }
 
 .sumario {
-    height: 100%;
     float: left;
     margin-left: 2.5%;
     position: fixed;
+    top: 253px;
 }
 
 .resenhas .resenha .form {
@@ -446,7 +530,7 @@ a:hover {
 .resenhas .resenha .form .group-form {
     width: calc(100% / 3 - 2px);
     text-align: center;
-    border-left: 1px solid #000;
+    border-left: 1px solid hsl(202, 100%, 24%);
     height: 61px;
 }
 .resenhas .resenha .form .group-form:first-child {
@@ -467,8 +551,10 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.curiosidade, .grupo-personagem {
+.grupo-personagem {
     margin-top: 20px;
+}
+.curiosidade, .grupo-personagem {
     padding: 20px 10px;
     width: 1024px;
     margin: 0 auto;
