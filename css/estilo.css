@@ -137,7 +137,7 @@ body.home > section:nth-child(2n) {
     top: 30px;
     border-width: 0 1px 1px 1px;
     width: 150px;
-    box-shadow: 0.5px 0.5px 3pxhsl(0, 0%, 0%);
+    box-shadow: 1px 1px 0px hsl(0, 0%, 0%);
 }
 
 .drop:hover > .menuDrop > li {
@@ -235,7 +235,9 @@ a:hover {
 }
 .chamada img {
     max-width: 150px;
-    min-height: 200px;
+}
+.chamada img:nth-of-type(2) {
+    margin-top: 66px;
 }
 
 .home .novidadesRecentes {
@@ -303,8 +305,8 @@ a:hover {
 }
 
 .resenhas {
-    width: calc(80% - 4%);
-    margin: -31px 2.5% 0 17.5%;
+    width: 96%;
+    margin: -31px 2.5% 0 0;
     float: left;
     padding: 0 2%;
 }
@@ -524,9 +526,15 @@ a:hover {
 
 .sumario {
     float: left;
-    margin-left: 2.5%;
     position: fixed;
     top: 253px;
+}
+
+.resenhas .resenha .divisao {
+    margin-top: 10px;
+}
+.resenhas .resenha, .resenhas > .titulo {
+    margin-left: 17.5%;
 }
 
 .resenhas .resenha .form {
@@ -569,13 +577,23 @@ a:hover {
 
 .curiosidadeArtig {
     clear: both;
+    padding: 0 15%;
 }
 
-.curiosidadeArtig .imgCuriosidade, .curiosidadeArtig .descricaoCuriosidade {
-    width: calc(50% - 20px);
-    float: left;
-    padding: 20px 10px;
+.curiosidadeArtig .containerImg {
+    text-align: right;    
+    width: 199px;
+}
+.curiosidadeArtig .containerImg img {
+    max-width: 199px;
+}
+.curiosidadeArtig .descricaoCuriosidade, .curiosidadeArtig .containerImg {
     max-height: 199px;
+    float: left;
+}
+.curiosidadeArtig .descricaoCuriosidade {
+    padding: 0 10px 20px 10px;
+    width: calc(100% - 219px);
 }
 
 .img-curiosidade {
@@ -595,6 +613,7 @@ a:hover {
     padding: 20px 30px;
     margin-top: 20px;
 	color: #FFF;
+	background-color: hsl(0, 0%, 24%);
     background-repeat: no-repeat;
     background-position: center;
 	border-radius: 5px;
@@ -627,7 +646,7 @@ a:hover {
 .grupo-personagem  a, .curiosidade a {
     font-family: 'Open Sans', arial, verdana, sans-serif;
     text-transform: uppercase;
-	font-weight: 550;
+    font-weight: 600;
 }
 .grupo-personagem  a {
     text-shadow: 1px 1px 1px #000;
