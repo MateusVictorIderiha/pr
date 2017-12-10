@@ -23,8 +23,15 @@ body {
 }
 
 .conteudo, .chamada, .curiosidades, .personagens {
-    width: 80%;
-    margin: 0 10%;
+    margin: 0 2.5%;
+}
+
+.curiosidade {
+    background-color: hsla(202, 100%, 40%, 0.1);
+    padding: 30px;
+}
+.curiosidade:nth-of-type(2n) {
+    margin-top: 20px;
 }
 
 body > section {
@@ -38,6 +45,7 @@ body.home > section:nth-child(2n) {
 
 .divisao {
     border: 0.5px solid hsl(202, 100%, 24%);
+    clear: both;
 }
 
 .topo {
@@ -129,7 +137,7 @@ body.home > section:nth-child(2n) {
     top: 30px;
     border-width: 0 1px 1px 1px;
     width: 150px;
-    box-shadow: 1px 1px 1px hsl(0, 0%, 0%);
+    box-shadow: 0.5px 0.5px 3pxhsl(0, 0%, 0%);
 }
 
 .drop:hover > .menuDrop > li {
@@ -168,7 +176,7 @@ a {
 }
 
 a:hover {
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 31%);
 }
 
 .mascara {
@@ -195,7 +203,7 @@ a:hover {
 .objetivosPag .texto-pag {
     float: right;    
     max-width: 33%;
-    text-align: center;
+    text-align: justify;
     padding: 0 2%;
 }
 
@@ -240,7 +248,7 @@ a:hover {
     width: 48%;
     background-color: hsl(100, 100%, 100%);
     margin: 0 10px 10px 0;
-    box-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0.5px 0.5px 3px hsla(0, 0%, 0%, 0.25);
 }
 .novidadesRecentes figure.novidadeRecent:nth-of-type(2n) {
     margin-right: 0;
@@ -282,6 +290,7 @@ a:hover {
     color: hsl(0, 0%, 100%);
     background-color: #007dc6;
     border: 2px solid #007dc6;
+    cursor: pointer;
 }
 .novidadesRecentes .btnLeia {
     float: right;
@@ -360,10 +369,6 @@ a:hover {
     z-index: 99;
 }
 
-/*#personagen-mugiwara {
-    background-image: url("../imagens/mugiwara.jpg");
-}*/
-
 .sidebar {
     margin-right: 2.5%;
     margin-bottom: 2.5%;
@@ -374,7 +379,7 @@ a:hover {
     width: 12%;
     text-align: center;
     padding: 1%;
-    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0.5px 0.5px 3px hsla(0, 0%, 0%, 0.25);
 }
 
 .tabela {
@@ -421,6 +426,7 @@ a:hover {
     width: calc(100% - 522px - 20px);
     float: left;
     padding-left: 20px;
+    text-align: justify;    
 }
 
 .personagem {
@@ -460,7 +466,7 @@ a:hover {
 }
 
 .novidade .artigo, .novidade #formNovidade {
-    padding: 0 10%;
+    padding: 0 2.5% 0 0;
 }
 
 .group-form {
@@ -473,6 +479,7 @@ a:hover {
     padding-left: 2.5%;
 }
 .curiosidade-sbs p.perguntaSBS {
+    margin-top: 20px;
     width: 50%;
     float: left;
     clear: both
@@ -481,6 +488,7 @@ a:hover {
     text-align: right;
     float: right;
     margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .novidade #formNovidade .group-form {
@@ -547,13 +555,15 @@ a:hover {
 .resenha, .curiosidade, .grupo-personagem  {
     margin-bottom: 20px;
 }
+.resenha, .artigo, .curiosidadeArtig {
+    text-align: justify;
+}
 
 .grupo-personagem {
     margin-top: 20px;
 }
 .curiosidade, .grupo-personagem {
     padding: 20px 10px;
-    width: 1024px;
     margin: 0 auto;
 }
 
@@ -573,13 +583,62 @@ a:hover {
     margin: 0 20px 20px 0;
 }
 
+.grupo-personagem  .subtitulo {
+	color: #FFF;
+	
+}
+
 .grupo-personagem {
     height: 112px;
-    width: calc(50% - 40px);
+    width: calc(50% - 70px);
     float: left;
+    padding: 20px 30px;
+    margin-top: 20px;
+	color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center;
+	border-radius: 5px;
 }
+
 .grupo-personagem:nth-of-type(2n) {
     margin-left: 20px;
+}
+
+#personagen-mugiwara {
+    background-image: url("../imagens/mugiwara_filter_dark.jpg");
+}
+
+#personagen-shichibukais {
+    background-image: url("../imagens/shichibukais_filter_dark.jpg");
+}
+
+#personagen-younkous {
+    background-image: url("../imagens/younkous_filter_dark.jpg");
+}
+
+#personagen-demais {
+    background-image: url("../imagens/todos_personagens_filter_dark.jpg");
+}
+
+.curiosidade, .grupo-personagem {
+    box-shadow: 0.5px 0.5px 10px hsl(0, 0%, 54%);
+}
+
+.grupo-personagem  a, .curiosidade a {
+    font-family: 'Open Sans', arial, verdana, sans-serif;
+    text-transform: uppercase;
+	font-weight: 550;
+}
+.grupo-personagem  a {
+    text-shadow: 1px 1px 1px #000;
+    font-size: 1.2em;
+}
+.grupo-personagem  a:hover {
+    color: #FFF;
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (min-width: 1366px) {
